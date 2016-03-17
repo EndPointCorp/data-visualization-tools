@@ -82,7 +82,7 @@ WebglMapTile.prototype._handleLoadedTexture = function() {
     //console.timeEnd("gl.texImage2D");
     gl.bindTexture(gl.TEXTURE_2D, null);
     var elapsed = performance.now() - before;
-    console.log(this.toString() + ': copied the texture in ' + elapsed + ' ms');
+    //console.log(this.toString() + ': copied the texture in ' + elapsed + ' ms');
     this._ready = true;
 }
 
@@ -170,7 +170,7 @@ updatePhase1 = function(displayFrame) {
   if (!WebglMapTile.lastStatsTime) {
     WebglMapTile.lastStatsTime = performance.now();
   } else if (performance.now() - WebglMapTile.lastStatsTime > 5000) {
-    console.log(WebglMapTile.stats());
+    //console.log(WebglMapTile.stats());
     WebglMapTile.lastStatsTime = performance.now();
   }
 
@@ -314,8 +314,8 @@ _captureFrame = function(captureFrameno, destIndex) {
                 this._pipelineToString());
   }
   if (elapsed > 10) {
-    console.log(this._id + ': long capture time ' + Math.round(elapsed) + ' ms.  readyState was ' + readyState +
-	       ', time was ' + currentTime);
+    //console.log(this._id + ': long capture time ' + Math.round(elapsed) + ' ms.  readyState was ' + readyState +
+	       //', time was ' + currentTime);
   }
 
   //if (this._ready) {
